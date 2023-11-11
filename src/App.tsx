@@ -10,33 +10,33 @@ import CreateAccount from "./pages/Auth/CreateAccount";
 import PrivateRoute from "./components/Route/PrivateRoute";
 
 function App() {
-    return (
-        <Routes>
-            <Route path="/" element={<Layout />}>
-                <Route
-                    index
-                    element={
-                        <PrivateRoute>
-                            <Dashboad />
-                        </PrivateRoute>
-                    }
-                />
+  return (
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route
+          index
+          element={
+            <PrivateRoute>
+              <Dashboad />
+            </PrivateRoute>
+          }
+        />
 
-                <Route
-                    path="/parcels"
-                    element={
-                        <PrivateRoute>
-                            <Parcels />
-                        </PrivateRoute>
-                    }
-                />
-            </Route>
+        <Route
+          path="/parcels"
+          element={
+            <PrivateRoute>
+              <Parcels />
+            </PrivateRoute>
+          }
+        />
+      </Route>
 
-            <Route path="/create-account" element={<CreateAccount />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="*" element={<NotFound />} />
-        </Routes>
-    );
+      <Route path="/create-account" element={<CreateAccount />} />
+      <Route path="/login" element={<Login />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
+  );
 }
 
 export default App;
