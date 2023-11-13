@@ -1,26 +1,26 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 interface RightBarProps {
-    isOpen: boolean;
-    parcelShown?: any;
+  isOpen: boolean;
+  parcelShown?: any;
 }
 
 const initialState: RightBarProps = {
-    isOpen: false,
+  isOpen: false,
 };
 
 const rightbarSlice = createSlice({
-    name: "RightBar",
-    initialState,
-    reducers: {
-        openRightbar: (state) => {
-            state.isOpen = true;
-        },
-
-        closeRightbar: (state) => {
-            state.isOpen = false;
-        },
+  name: "RightBar",
+  initialState,
+  reducers: {
+    openRightbar: (state) => {
+      state.isOpen = true;
     },
+
+    closeRightbar: (state) => {
+      state.isOpen = false;
+    },
+  },
 });
 
 export default rightbarSlice.reducer;
