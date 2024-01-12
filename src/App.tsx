@@ -8,6 +8,7 @@ import NotFound from "./pages/404";
 import Login from "./pages/Auth/Login";
 import CreateAccount from "./pages/Auth/CreateAccount";
 import PrivateRoute from "./components/Route/PrivateRoute";
+import Packages from "./pages/Packages";
 
 function App() {
   return (
@@ -27,6 +28,15 @@ function App() {
           element={
             <PrivateRoute>
               <Parcels />
+            </PrivateRoute>
+          }
+        />
+
+        <Route
+          path="/packages"
+          element={
+            <PrivateRoute>
+              <Packages />
             </PrivateRoute>
           }
         />
